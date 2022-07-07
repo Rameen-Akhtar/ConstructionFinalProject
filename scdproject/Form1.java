@@ -27,13 +27,18 @@ public class Form1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFileChooser1 = new javax.swing.JFileChooser();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         T1 = new javax.swing.JTextField();
         P1 = new javax.swing.JPasswordField();
         b1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        l1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,13 +71,16 @@ public class Form1 extends javax.swing.JFrame {
         });
         getContentPane().add(b1, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 270, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/scdproject/background.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 370));
-
         jLabel5.setBackground(new java.awt.Color(255, 102, 102));
         jLabel5.setFont(new java.awt.Font("Algerian", 1, 24)); // NOI18N
         jLabel5.setText("LOGIN FORM");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+
+        l1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        getContentPane().add(l1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 380, 30));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/scdproject/background.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -83,9 +91,17 @@ public class Form1 extends javax.swing.JFrame {
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         // TODO add your handling code here:
-        Form2 obj= new Form2();
-        obj.setVisible(true);
-        this.dispose();
+        if(T1.getText().isEmpty() || P1.getText().isEmpty())
+        {
+            l1.setText(" EMPTY FIELD !!! FILL ALL FIELDS");
+        }
+        else
+        {
+         Form2 obj= new Form2();
+         obj.setVisible(true);
+         this.dispose();
+        }
+       
     }//GEN-LAST:event_b1ActionPerformed
 
     /**
@@ -127,9 +143,12 @@ public class Form1 extends javax.swing.JFrame {
     private javax.swing.JPasswordField P1;
     private javax.swing.JTextField T1;
     private javax.swing.JButton b1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel l1;
     // End of variables declaration//GEN-END:variables
 }

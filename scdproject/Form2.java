@@ -27,9 +27,17 @@ public class Form2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        B1 = new javax.swing.JButton();
         B2 = new javax.swing.JButton();
+        B1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+
+        B2.setBackground(new java.awt.Color(255, 153, 153));
+        B2.setText("RECIPIENT");
+        B2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B2ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -42,15 +50,6 @@ public class Form2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(B1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
-        B2.setBackground(new java.awt.Color(255, 153, 153));
-        B2.setText("RECIPIENT");
-        B2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/scdproject/blood.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -66,14 +65,15 @@ public class Form2 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_B1ActionPerformed
 
+    /*
     private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
         // TODO add your handling code here:
-        RecipientDataEntryForm obj= new RecipientDataEntryForm ();
+        DonorDataEntryForm obj= new DonorDataEntryForm ();
         obj.setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_B2ActionPerformed
-
+*/
     /**
      * @param args the command line arguments
      */
